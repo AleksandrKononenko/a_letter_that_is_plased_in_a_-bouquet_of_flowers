@@ -73,56 +73,43 @@ img:hover {
     text-align: justify;
 }
 
-@media (max-width: 768px) {
-    body, html {
-        margin: 0;
-        padding: 0;
-        font-family: "Segoe UI", Roboto, sans-serif;
-        line-height: 1.6;
-        color: white;
-        overflow-x: hidden;
-        position: relative;
+/* Фонове зображення */
+.mobile-bg {
+    position: fixed;       /* завжди на фоні */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("pictures/rosenfeld.png");
+    background-size: cover;  /* зберігає пропорції */
+    background-position: center center;
+    z-index: -1;             /* під контентом */
+}
 
-        /* Коректний фон для мобільних */
-        background-image: url("pictures/rosenfeld.png");
-        background-repeat: no-repeat;
-        background-position: center top; /* або center center */
-        background-size: contain; /* щоб не розтягувалося */
+/* Мобільні екрани */
+@media (max-width: 768px) {
+    .mobile-bg {
+        background-size: cover; /* не розтягується */
     }
 
     .content {
-        position: relative;
-        z-index: 2;
-        text-align: left;
         padding: 1rem;
         max-width: 100%;
-        margin: auto;
     }
 
     p, h1, h3 {
-        text-align: left;
         font-size: clamp(1rem, 4vw, 1.5rem);
+        text-align: left;
     }
 
     img {
         max-width: 100%;
         height: auto;
-        border-radius: 15px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         display: block;
         margin: 0.5rem auto;
     }
-
-    pre {
-        white-space: normal;
-        font-size: 1rem;
-        text-align: center;
-    }
-
-    .petal {
-        width: 20px;
-    }
 }
+
 
 
 
@@ -138,6 +125,9 @@ img:hover {
 
 <body>
 
+    <!-- Фонове зображення -->
+    <div class="mobile-bg"></div>
+    
     <div class="content"; class="text">  
         <h1>Die Antwort ist "Ja" <img src="https://i.gifer.com/7DZz.gif" alt="Feuerwerk" width="150" ></h1>
 
