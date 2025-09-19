@@ -73,7 +73,6 @@ img:hover {
     text-align: justify;
 }
 
-/* Мобільні екрани */
 @media (max-width: 768px) {
     body, html {
         margin: 0;
@@ -84,10 +83,11 @@ img:hover {
         overflow-x: hidden;
         position: relative;
 
-        /* Фон для мобільних: без fixed */
-        background: url("pictures/rosenfeld.png") no-repeat center center;
-        background-size: cover;
-        min-height: 100vh; /* замість height: 100vh */
+        /* Коректний фон для мобільних */
+        background-image: url("pictures/rosenfeld.png");
+        background-repeat: no-repeat;
+        background-position: center top; /* або center center */
+        background-size: contain; /* щоб не розтягувалося */
     }
 
     .content {
@@ -109,13 +109,8 @@ img:hover {
         height: auto;
         border-radius: 15px;
         box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
         display: block;
         margin: 0.5rem auto;
-    }
-
-    img:hover {
-        transform: scale(1.05);
     }
 
     pre {
@@ -124,11 +119,11 @@ img:hover {
         text-align: center;
     }
 
-    /* Пелюстки */
     .petal {
         width: 20px;
     }
 }
+
 
 
 /* Дуже великі екрани */
