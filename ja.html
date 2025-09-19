@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> "Jaaa" &#127881;</title>
+    <style>
+        h1 { font-size: clamp(1.5rem, 4vw, 3rem); margin-bottom: 1rem; }
+        h3 { font-size: clamp(1.2rem, 4vw, 2rem); margin-bottom: 1rem; }
+        
+        body, html {
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Roboto, sans-serif;
+        line-height: 1.6;
+        background: url("pictures/rosenfeld.png") no-repeat center center fixed;
+        background-size: cover;
+        color: white;
+        overflow-x: hidden;
+        position: relative;
+    }
+
+
+    /* Пелюстки */
+    .petal {
+        position: absolute;
+        width: 30px;
+        height: auto;
+        pointer-events: none;
+        opacity: 0.9;
+        z-index: 1;
+        animation: fall linear forwards;
+    }
+
+    @keyframes fall {
+        0% {
+            transform: translateY(0) rotate(0deg);
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(var(--fall-height)) rotate(360deg);
+            opacity: 0;
+        }
+    }
+    .content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        padding: 2rem;
+        max-width: 90%;
+        margin: auto;
+    }
+        p {
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            margin-bottom: 1.2rem;
+            text-align: justify;
+            }
+
+            img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+        .text {
+            margin-top: 30px;
+            text-align: justify;
+        }
+
+       /* Для дрібних екранів (мобільних) */
+@media (max-width: 768px) {
+    p, h1, h3 {
+        text-align: left; /* щоб легше читати */
+    }
+
+    .content {
+        padding: 1rem;
+    }
+
+    img {
+        max-width: 100%; /* щоб точно не вилазили */
+    }
+
+    /* Картинки в ряд (gym photos) → стовпчик */
+    .content p img {
+        display: block;
+        margin: 0.5rem auto;
+    }
+
+    pre {
+        white-space: normal; /* щоб переносився текст */
+    }
+}
+
+/* Для дуже великих екранів */
+@media (min-width: 1200px) {
+    .content {
+        max-width: 90%; /* не розтягувати текст на всю ширину */
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div class="content"; class="text">  
+        <h1>Die Antwort ist "Ja" <img src="https://i.gifer.com/7DZz.gif" alt="Feuerwerk" width="150" ></h1>
+
+        <h3>Hintergrund</h3>
+
+        <p> Denn diese Karte wird zwischen Blumen platziert. Ich glaube, sie schreiben etwas Romantisches darauf und den Grund für das Schenken dieser Blumen.
+            Aber das ist keine einfache Karte. Ich möchte von vorne beginnen und Ihnen erzählen, wie es für mich war. 
+        </p>
+        <p style="text-align: center;">
+                <img src="pictures/lacheln_mein.jpg" alt="Lacheln" width="300">
+        </p>
+
+            <p>
+                Das alles passierte an meinem Geburtstag, als wir uns zum ersten Mal trafen. Ich mochte dich, aber du wolltest nicht mit mir reden oder kommunizieren. 
+                Ich habe versucht, dich über Instagram anzusprechen, aber als Antwort bekam ich nur Folgendes:
+            </p>
+
+            <p style="text-align: center;">&#11107;</p>
+            
+            <p style="text-align: center;">
+                <img src="pictures/sprechen_antwort.jpg" alt="Du will nicht mit mich sprechen" width="300"> 
+            </p>
+
+            <p>
+                Ich war etwas verärgert und versuchte weiterzumachen, vielleicht klappte es ja. Aber du warst wie eine Mauer, wolltest mich nicht verstehen oder mir entgegenkommen. 
+                Ich beschloss, es noch einmal zu versuchen, aber es funktionierte nicht. Also beschloss ich, dich in Ruhe zu lassen, um dich nicht zu verärgern oder einzumischen und damit es später nicht noch schlimmer wird. 
+                Ich beschloss, leise zu verschwinden und „unsichtbar“ zu werden.
+            </p>
+
+            <p style="text-align: center;">
+                <img src="pictures/unsichtbar.jpg" alt="Ich war unsichtbar" width="300">
+            </p>
+
+            <p>
+                Doch dann bekam ich eines Tages eine SMS von dir und in mir machte es Klick. Ich war so glücklich, diese SMS von dir zu sehen.
+            </p>
+
+            <p style="text-align: center;">
+                <img src="pictures/sms.jpg" alt="SMS" width="300">
+            </p>
+
+            <p>
+                Ich habe mich noch nie so sehr auf das Wochenende gefreut wie an diesem Tag.
+            </p>
+
+            <p style="text-align: center;">
+                <img src="pictures/zigaretten.jpg" alt="Ich war so glücklich"width="300" >
+            </p>
+            <p>Nach diesem Wochenende fühlte ich mich wie neugeboren und beschloss, noch einmal mit dir zu reden. Und es gelang mir, und ich war so glücklich, dass ich, auch wenn ich es nicht zeigte, vor Freude schreien wollte. 
+                Ich wollte die Zeit anhalten und diesen Moment in meinem Leben immer wieder erleben. 
+                Aber die Dinge werden nie so sein, wie wir es uns wünschen, und genau das ist passiert. Ich habe es wieder geschafft:
+            </p>
+
+            <p style="text-align: center;">&#11107;</p>
+
+            <p style="text-align: center;"><img src="pictures/schwanz_im_arsch.jpg" alt="Schwanz im Arsch" width="300"></p>
+
+            <p>Ich habe deine SMS bekommen, was mich sehr aufgeregt hat, aber ich hatte keine andere Wahl und wollte unbedingt dein Freund sein, obwohl das nicht Teil meiner Pläne war. 
+                Trotzdem wollte ich dich besser kennenlernen, um zu wissen, was als Nächstes zu tun ist.
+            </p>
+
+            <p style="text-align: center;"> <img src="pictures/sms_2.jpg" alt="SMS" width="300" ></p>
+
+            <p>
+                Ich weiß nicht, wie ich es dir richtig erklären soll, aber ich werde es versuchen. Denn ich wollte mehr Zeit mit dir verbringen, dich als Person kennenlernen. Ich kann nicht sagen, dass ich eine Beziehung wollte, aber ich kann es auch nicht leugnen, weil ich dich nicht kenne.
+                Ich wollte einfach mehr kommunizieren, Zeit miteinander verbringen, Zeit mit dir verbringen, dich so gut wie möglich zufriedenstellen, dich glücklich und zufrieden machen. Zumindest versuchen. Ich hoffe, du verstehst, was ich damit meinte &#128591;. 
+                Ja, ich mochte dich als Mädchen und wollte dir zeigen, was ich für dich tun kann. Aber das kann ich nicht, du lässt mich nicht, und ich glaube, das wirst du nie tun, besonders nach dem, was ich dir jetzt in diesem Brief schreibe. 
+                Ich glaube, du hast gemerkt, dass ich dich mag, und aus irgendeinem Grund, wahrscheinlich gerade deshalb, willst du nicht mit mir kommunizieren. Aber ich respektiere jeden Menschen und seine Entscheidungen. Deshalb werde ich nichts tun, was du nicht willst.
+                Wir wollten dich wirklich bei uns in der Firma haben. Ich wollte dir unbedingt etwas mehr Spaß machen. Und nachdem du mir von deinen vergangenen Beziehungen erzählt hast, dachte ich, du wärst verschlossen und hättest Angst, jemandem zu vertrauen, oder vielleicht wolltest du einfach nichts&#10060;. 
+                Aber ich wollte dir unbedingt zeigen, dass jeder anders ist und du einfach noch nie jemanden getroffen hast, der bereit ist, so viel für dich zu tun. Ich glaube, dir wurde nicht gezeigt, wie sehr man jemanden schätzen und wie viel man für ihn tun kann. Ich wollte es dir unbedingt zeigen, aber ...
+            </p>
+
+            <p style="text-align: center;"> <img src="pictures/ziga.jpg" alt="Jawohl!" width="100" ></p>
+
+            <h3 style="text-align: center;">Die Hauptsache bist jetzt du
+                <p style="text-align: center;"> <img src="pictures/pia.jpg" alt="Pai" width="500" ></p>
+            </h3>
+
+            <p>Wenn Sie sich mit meinen Augen sehen könnten, wären Sie, glaube ich, vom Ergebnis schockiert.</p>
+            <p style="text-align: center;"><img src="pictures/love-in-aye.png" alt="Love in aye" width="300" ></p>
+
+            <p>
+                Ich möchte mit der banalsten Sache beginnen: Du bist wunderschön.
+            </p>
+            <p style="text-align: center;"><img src="pictures/pia_wunderschon.jpg" alt="Du bist wunderschön" width="700" ></p>
+
+            <p>Deine Augen sind etwas Besonderes. Sie leuchten so hell, bläulich-grün. Sie wirken streng, doch sie ziehen an und locken. 
+                Sie leuchten immer den Weg, und du bist schon von weitem sichtbar. Mit diesen Augen manipulierst du die Herzen der Menschen.
+                Ich ertrinke in deinen Augen.
+            </p>
+
+            <p style="text-align: center;"><img src="pictures/pia_augen.jpg" alt="Augen bist wunderschön" width="700" ></p>
+
+            <p>Ich kann nicht für meine Lippen sprechen. Normalerweise glaube ich, dass die Leute erst darüber reden, nachdem sie sie probiert haben, hahaha.
+                Aber deine sind weder groß noch klein. Sie sehen weich und leicht aus, wie eine Wolke. Es könnte unheimlich sein, denn ich glaube, wenn man sie berührt, schmelzen sie wie Zuckerwatte.
+                Sie sehen so zart aus wie Rosenblätter.
+            </p>
+            <p style="text-align: center;"><img src="pictures/pia_lippen.jpg" alt="Lippen bist wunderschön" width="400" > </p>
+
+            <p>Du bist echt cool. Du bist sportlich, hast ein Ziel und arbeitest darauf hin. 
+                Du bist mit vollem Einsatz bei der Arbeit, was super ist. Du bist ein netter Mensch, und obwohl ich dich nicht kenne, kann ich das bestätigen. 
+                Du bist sehr mutig und hast vor nichts Angst. Du bist ein sehr starkes Mädchen.
+            </p>
+
+            <p style="text-align: center;">
+                <img src="pictures/pia_gym.jpg" alt="Du bist ein sehr starkes Mädchen" width="300" >
+                <img src="pictures/pia_gym_2.jpg" alt="Du bist ein sehr starkes Mädchen" width="300" >
+                <img src="pictures/pia_gym_3.jpg" alt="Du bist ein sehr starkes Mädchen" width="300" >
+                <img src="pictures/pia_gym_4.jpg" alt="Du bist ein sehr starkes Mädchen" width="300" >
+            </p>
+
+            <p>
+                Dein Körper ist wunderschön und durchtrainiert. Ich rede nicht gern über meinen Körper, es ist mir peinlich. 
+                Ich könnte noch viel mehr erzählen, aber ich glaube, du verstehst mich vielleicht falsch.
+                Deshalb erzähle ich es dir später, wenn ich mir ganz sicher bin, dass du es verstehst.
+            </p>
+
+            <p style="text-align: center;"><img src="pictures/pia_body.jpg" alt="Body" width="300" ></p>
+
+            <p style="text-align: center;">
+                <pre style= "font-size: 1.5rem; display: inline-block; text-align: center;">
+                    Du siehst so wunderschön aus in diesem Kleid
+                    Und ich möchte dich jetzt umarmen,
+                    Und Tage und Nächte in Jahre verwandeln,
+                    Du bist so unglaublich wunderschön.</pre>
+            </p>
+            <p style="text-align: center;"><img src="pictures/pia_kleid.jpg" alt="Body" width="300" ></p>
+
+            <p>
+                Du hast das schönste Lächeln der Welt. Es ist bezaubernd.
+                Es ist charmant, zart und ich möchte es einfach nur ansehen, deine Lippen, deine Augen, dich ganz und gar, wie eine Skulptur. 
+                Ich kann nicht aufhören, dich anzuschauen.
+            </p>
+
+            <p style="text-align: center;"><img src="pictures/pia_lacheln.jpg" alt="Lächeln" width="300" ></p>
+
+            <h3 style="text-align: center;">Was ich zusammenfassen möchte</h3>
+
+            <p>
+                Du musst dich mit meinen Augen sehen, um zu verstehen, was ich sagen wollte, denn das ist nur ein kleiner Teil dessen, was ich in dir sehe. 
+                Ich möchte dich gerne besser kennenlernen, mit dir reden. Ich rechne mit nichts, obwohl ich es ehrlich gesagt wirklich möchte. Aber wie gesagt, 
+                ich werde es dir durch meine Taten zeigen, wenn du es mir erlaubst, natürlich. Aber ich will nichts überstürzen, ich möchte dich erst einmal besser kennenlernen. 
+                Das Souvenir, das ich dir geschenkt habe, ist nicht besonders gut, ich kenne dich einfach nicht und wusste nicht, was ich kaufen sollte. 
+                Ein Kühlschrankmagnet ist einfach Mist. Du arbeitest viel, und ich denke, mein Souvenir würde dir bei der Arbeit guttun.
+            </p>
+
+            <p>
+                Ich kenne den wahren Grund nicht, warum du nicht ausgehen und Zeit mit uns verbringen willst, aber ich glaube nicht, dass es an der Arbeit liegt.
+                Sei nicht böse oder beleidigt; das sind nur meine Vermutungen. 
+                Aber wir würden uns sehr freuen, dich bei uns zu sehen, uns in schwierigen Situationen zu helfen und mit dir Spaß zu haben.
+            </p>
+
+            <p style="text-align: center;"><img src="pictures/biliard.jpg" alt="Biliard" width="500" > <img src="pictures/chillen.jpg" alt="Chillen" width="400" ></p>
+
+            <p>Ich würde gerne viel sagen und argumentieren, aber ich möchte alles tun und beweisen. Dich zu bitten, mir eine Chance zu geben – nun, das fände ich unhöflich. Ich sage dir, du sollst darüber nachdenken, wenn du Zeit hast.
+                Aber du sollst wissen, dass ich dir immer helfen und dich unterstützen werde, zu jeder Tageszeit.
+                Wir warten auf dich, denn wir sind noch zu viert und wollen eine neue Gruppe gründen, in der wir immer Spaß haben.
+                Ich bin wirklich neugierig. Du wolltest uns nach dem Volleyball besuchen, aber in meinen Ferien ist etwas passiert, und das war’s. Du willst nicht mit uns abhängen. Das ist schade.
+                Um dir Zeit zu sparen, und nicht unsere, sag mir einfach deine Antwort: Willst du mit uns abhängen? Bitte sag es mir so, wie es ist, sag einfach die Wahrheit. „Besser eine bittere Wahrheit als eine süße Lüge.“
+                Aber wisse: Wir warten immer auf dich.</p>
+
+                <p style="text-align: center;"><img src="pictures/warte.jpg" alt="Ich warte" width="300" > <img src="pictures/warten_wir.jpg" alt="Wir warten" width="700" ></p>
+
+                <p>Nachtrag: Ein Freund meinte, das sei keine gute Idee, aber ich habe es nur getan, um dich zum Lächeln zu bringen. Ich hoffe, du hast beim Lesen noch mehr gelächelt und dich darüber gefreut, wenn auch nur ein bisschen. 
+                    Ich glaube, so etwas hast du noch nie bekommen. Wir leben im 21. Jahrhundert, im Zeitalter der digitalen Technologie, und nur so funktioniert es.
+                    Ich hoffe wirklich, du hast die Zeit mit uns und mit mir genossen. Und letztendlich ist es schön, das zu bekommen.  
+                    Ich erinnere dich daran: Lächle öfter. Ich habe dir gesagt, dein Lächeln ist schön und steht dir. Vergiss nicht zu lächeln.
+                </p>
+                <p style="text-align: center;"><img src="pictures/bay.jpg" alt="Bay" width="500" ></p>
+
+    </div>
+    
+
+    <script>
+        const petals = [
+            "pictures/petal1.png",
+            "pictures/petal2.png",
+            "pictures/petal3.png"
+        ];
+    
+        function createPetal() {
+            const petal = document.createElement("img");
+            petal.classList.add("petal");
+            const randomPetal = petals[Math.floor(Math.random() * petals.length)];
+            petal.src = randomPetal;
+            petal.style.left = Math.random() * 100 + "vw";
+            petal.style.width = (20 + Math.random() * 40) + "px";
+    
+            // Позиція верхньої видимої частини екрана
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            const viewportHeight = window.innerHeight;
+            petal.style.top = (scrollTop - 50) + "px";
+            petal.style.setProperty('--fall-height', viewportHeight + 100 + "px");
+    
+            // Плавна швидкість падіння
+            const duration = 15 + Math.random() * 5; // 15–20 секунд
+            petal.style.animation = `fall ${duration}s linear forwards`;
+    
+            document.body.appendChild(petal);
+    
+            setTimeout(() => { petal.remove(); }, duration * 1000);
+        }
+    
+        setInterval(createPetal, 300); // створюємо пелюстки кожні 300ms
+    </script>
+    
+
+</body>
+
+</html>
