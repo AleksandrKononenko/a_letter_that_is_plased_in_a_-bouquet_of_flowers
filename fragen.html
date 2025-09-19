@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Es ist alles für Ihr Lächeln &#128196;</title>
+    <style>
+        h1{
+            text-align: center;
+            color: rgb(229, 255, 0);
+            font-family: courier;
+        }
+        body {
+            text-shadow: 2px 5px 0px rgba(0,0,0,0.5);
+            font-size: 150%;
+            font-family: courier;
+            text-align: center;
+            background-image: url("pictures/fragen.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            background-position: center;
+            color: rgb(0, 255, 255);
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 100px 300px;
+            
+        }
+
+        .special-btn {
+            text-shadow: 2px 5px 0px rgba(0,0,0,0.5);
+            position: relative;
+            background-color: green;
+            color: white;
+            font-size: 50px;
+            padding: 20px 30px;
+            border-radius: 100px;
+            border: none;        /* прибирає стандартну рамку */
+            cursor: pointer;
+            transition: transform 1.3s;
+        }
+        .special-btn:hover {
+            background-color: greenyellow;
+            transform: scale(1.8);
+        }
+
+        .special-btn1 {
+            text-shadow: 2px 5px 0px rgba(0,0,0,0.5);
+            position: relative;
+            background-color: red;
+            color: white;
+            font-size: 50px;
+            padding: 20px 30px;
+            border-radius: 100px;
+            border: none;        /* прибирає стандартну рамку */
+            cursor: pointer;
+            transition: transform 1.3s;
+        }
+        .special-btn1:hover {
+            background-color: rgb(145, 6, 24);
+            transform: scale(1.8);
+        }
+        /* Текст і емоджі всередині кнопки */
+         .special-btn .text, .special-btn .emoji,
+         .special-btn1 .text, .special-btn1 .emoji {
+            display: inline-block;
+            transition: opacity 0.3s;
+        }
+
+        /* Спочатку емоджі приховано */
+        .special-btn .emoji, .special-btn1 .emoji {
+            opacity: 0;
+        }
+
+        /* При наведенні: текст зникає, емоджі з’являється */
+        .special-btn:hover .text, .special-btn1:hover .text {
+            opacity: 0;
+        }
+
+        .special-btn:hover .emoji, .special-btn1:hover .emoji {
+            opacity: 1;
+        }
+        @media (max-width: 768px) {
+    h1 {
+        font-size: 6vw;
+    }
+    p {
+        font-size: 4vw;
+    }
+    .special-btn, .special-btn1 {
+        font-size: 6vw;
+        padding: 3vw 5vw;
+    }
+}
+
+    </style>
+</head>
+<body>
+<h1>Normalerweise steckt man einen Umschlag mit allem, was darin steht, in einen Blumenstrauß. Und das hier ist dieser Umschlag &#128579;.</h1>
+<p style="font-size: 200%;"> <b>Möchtest du diesen Brief lesen? &#128214;</b> </p>
+<div class="button-container">
+    <button class="special-btn" onclick="window.location.href='ja.html'">
+        <span class="text">Ja</span>
+        <span class="emoji"> &#128525;</span>
+    </button>
+    <button class="special-btn1" onclick="window.location.href='nein.html'">
+        <span class="text">Nein</span>
+        <span class="emoji"> &#128575;</span>
+    </button>
+</div>
+
+
+</body>
+</html>
