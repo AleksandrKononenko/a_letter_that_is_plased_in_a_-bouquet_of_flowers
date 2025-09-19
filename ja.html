@@ -5,77 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> "Jaaa" &#127881;</title>
     <style>
-        h1 { font-size: clamp(1.5rem, 4vw, 3rem); margin-bottom: 1rem; }
-        h3 { font-size: clamp(1.2rem, 4vw, 2rem); margin-bottom: 1rem; }
-        
-        body, html {
-        margin: 0;
-        padding: 0;
-        font-family: "Segoe UI", Roboto, sans-serif;
-        line-height: 1.6;
-        background: url("pictures/rosenfeld.png") no-repeat center center fixed;
-        background-size: cover;
-        color: white;
-        overflow-x: hidden;
-        position: relative;
+    body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    color: white;
+    overflow-x: hidden;
+    position: relative;
+    
+    /* Фон для десктопів */
+    background: url("pictures/rosenfeld.png") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Пелюстки */
+.petal {
+    position: absolute;
+    width: 30px;
+    height: auto;
+    pointer-events: none;
+    opacity: 0.9;
+    z-index: 1;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
     }
-
-
-    /* Пелюстки */
-    .petal {
-        position: absolute;
-        width: 30px;
-        height: auto;
-        pointer-events: none;
-        opacity: 0.9;
-        z-index: 1;
-        animation: fall linear forwards;
+    100% {
+        transform: translateY(var(--fall-height)) rotate(360deg);
+        opacity: 0;
     }
+}
 
-    @keyframes fall {
-        0% {
-            transform: translateY(0) rotate(0deg);
-            opacity: 1;
-        }
-        100% {
-            transform: translateY(var(--fall-height)) rotate(360deg);
-            opacity: 0;
-        }
-    }
-    .content {
-        position: relative;
-        z-index: 2;
-        text-align: center;
-        padding: 2rem;
-        max-width: 90%;
-        margin: auto;
-    }
-        p {
-            font-size: clamp(1rem, 2.5vw, 1.5rem);
-            margin-bottom: 1.2rem;
-            text-align: justify;
-            }
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 2rem;
+    max-width: 90%;
+    margin: auto;
+}
 
-            img {
-            max-width: 90%;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+p {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    margin-bottom: 1.2rem;
+    text-align: justify;
+}
 
-        img:hover {
-            transform: scale(1.05);
-        }
-        .text {
-            margin-top: 30px;
-            text-align: justify;
-        }
+img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-       /* Для дрібних екранів (мобільних) */
+img:hover {
+    transform: scale(1.05);
+}
+
+.text {
+    margin-top: 30px;
+    text-align: justify;
+}
+
+/* Мобільні екрани */
 @media (max-width: 768px) {
+    body, html {
+        background-attachment: scroll; /* замість fixed для мобільних */
+        background-size: cover;
+        background-position: center center;
+    }
+
     p, h1, h3 {
-        text-align: left; /* щоб легше читати */
+        text-align: left;
     }
 
     .content {
@@ -83,24 +90,23 @@
     }
 
     img {
-        max-width: 100%; /* щоб точно не вилазили */
+        max-width: 100%;
     }
 
-    /* Картинки в ряд (gym photos) → стовпчик */
     .content p img {
         display: block;
         margin: 0.5rem auto;
     }
 
     pre {
-        white-space: normal; /* щоб переносився текст */
+        white-space: normal;
     }
 }
 
-/* Для дуже великих екранів */
+/* Дуже великі екрани */
 @media (min-width: 1200px) {
     .content {
-        max-width: 90%; /* не розтягувати текст на всю ширину */
+        max-width: 90%;
     }
 }
 
