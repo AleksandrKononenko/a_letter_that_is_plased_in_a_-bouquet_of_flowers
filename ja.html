@@ -73,23 +73,24 @@ img:hover {
     text-align: justify;
 }
 
-/* Фонове зображення */
-.mobile-bg {
-    position: fixed;       /* завжди на фоні */
+.fixed-bg {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     background-image: url("pictures/rosenfeld.png");
-    background-size: cover;  /* зберігає пропорції */
+    background-size: cover;      /* зберігає пропорції */
     background-position: center center;
-    z-index: -1;             /* під контентом */
+    z-index: -1;                 /* під контентом */
+    transform: translateZ(0);    /* хак для iOS */
+    -webkit-backface-visibility: hidden;
 }
 
 /* Мобільні екрани */
 @media (max-width: 768px) {
-    .mobile-bg {
-        background-size: cover; /* не розтягується */
+    .fixed-bg {
+        background-size: cover; /* пропорції зберігаються */
     }
 
     .content {
@@ -111,8 +112,6 @@ img:hover {
 }
 
 
-
-
 /* Дуже великі екрани */
 @media (min-width: 1200px) {
     .content {
@@ -126,7 +125,7 @@ img:hover {
 <body>
 
     <!-- Фонове зображення -->
-    <div class="mobile-bg"></div>
+    <div class="fixed-bg"></div>
     
     <div class="content"; class="text">  
         <h1>Die Antwort ist "Ja" <img src="https://i.gifer.com/7DZz.gif" alt="Feuerwerk" width="150" ></h1>
