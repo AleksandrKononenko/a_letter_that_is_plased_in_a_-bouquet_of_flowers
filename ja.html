@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> "Jaaa" &#127881;</title>
     <style>
+
     body, html {
     margin: 0;
     padding: 0;
@@ -73,44 +74,35 @@ img:hover {
     text-align: justify;
 }
 
-.fixed-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url("pictures/rosenfeld.png");
-    background-size: cover;      /* зберігає пропорції */
-    background-position: center center;
-    z-index: -1;                 /* під контентом */
-    transform: translateZ(0);    /* хак для iOS */
-    -webkit-backface-visibility: hidden;
-}
-
 /* Мобільні екрани */
 @media (max-width: 768px) {
-    .fixed-bg {
-        background-size: cover; /* пропорції зберігаються */
+    body, html {
+        background-attachment: scroll; /* замість fixed для мобільних */
+        background-size: cover;
+        background-position: center center;
+    }
+
+    p, h1, h3 {
+        text-align: left;
     }
 
     .content {
         padding: 1rem;
-        max-width: 100%;
-    }
-
-    p, h1, h3 {
-        font-size: clamp(1rem, 4vw, 1.5rem);
-        text-align: left;
     }
 
     img {
         max-width: 100%;
-        height: auto;
+    }
+
+    .content p img {
         display: block;
         margin: 0.5rem auto;
     }
-}
 
+    pre {
+        white-space: normal;
+    }
+}
 
 /* Дуже великі екрани */
 @media (min-width: 1200px) {
@@ -119,14 +111,32 @@ img:hover {
     }
 }
 
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 10px;
+      border: none;
+      background: #4CAF50;
+      color: white;
+    }
+    button:hover {
+      background: #45a049;
+    }
+
     </style>
 </head>
 
 <body>
 
-    <!-- Фонове зображення -->
-    <div class="fixed-bg"></div>
+    <audio id="mySong" loop>
+        <source src="song.mp3" type="audio/mpeg">
+        Ваш браузер не підтримує відтворення аудіо.
+      </audio>
     
+      <!-- Кнопка Play/Pause -->
+      <button id="playPauseBtn">▶️ Play</button>
+
     <div class="content"; class="text">  
         <h1>Die Antwort ist "Ja" <img src="https://i.gifer.com/7DZz.gif" alt="Feuerwerk" width="150" ></h1>
 
@@ -296,9 +306,11 @@ img:hover {
                     Ich erinnere dich daran: Lächle öfter. Ich habe dir gesagt, dein Lächeln ist schön und steht dir. Vergiss nicht zu lächeln.
                     In meinen Augen bist du die weiße Rose, die zwischen all den stumpfen roten hervorsticht. Genau wie in einem Blumenstrauß.
                 </p>
+
                 <p>
-                Lass mich dich besser kennenlernen 🙏🥺
-               </p>
+                    Lass mich dich besser kennenlernen 🙏🥺
+                </p>
+
                 <p style="text-align: center;"><img src="pictures/bay.jpg" alt="Bay" width="500" ></p>
 
     </div>
@@ -335,6 +347,20 @@ img:hover {
         }
     
         setInterval(createPetal, 300); // створюємо пелюстки кожні 300ms
+
+        const song = document.getElementById("mySong");
+        const btn = document.getElementById("playPauseBtn");
+
+    btn.addEventListener("click", () => {
+      if (song.paused) {
+        song.play();
+        btn.textContent = "⏸ Pause";
+      } else {
+        song.pause();
+        btn.textContent = "▶️ Play";
+      }
+    });
+
     </script>
     
 
